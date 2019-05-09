@@ -13,11 +13,13 @@ class CreatePersonasTable extends Migration
      */
     public function up()
     {
-        Schema::create('_personas_', function (Blueprint $table) {
+        Schema::create('personas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('lastname');
             $table->integer('dni');
+            $table->integer('tel');
+            $table->datetime('fccNac');
             $table->timestamps();
         });
     }
