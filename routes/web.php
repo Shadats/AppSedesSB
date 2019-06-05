@@ -27,4 +27,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('users', 'UsersController@index');
 
-Route::get('users-list', 'UsersController@usersList'); 
+Route::get('/usersList', 'UsersController@usersList'); 
