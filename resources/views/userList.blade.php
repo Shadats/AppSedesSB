@@ -13,7 +13,6 @@
      	<th>Apellido</th>
      	<th>email</th>
      	<th>perfil</th>
-
      </tr>
      @foreach($users as $user)
      <tr>
