@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+    <style>
+    table, td, th {
+    border: 1px solid black;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th {
+      height: 50px;
+    }
+    </style>
 	<title>Writers</title>
 </head>
 <body>
@@ -20,9 +35,11 @@
      	<td>{{$writer->authors_name}}</td>
      	<td>{{$writer->real_name}}</td>
         @foreach($writer->articles as $article)
-        <td>{{article['title']}}</td>
-     	<td>{{article['about']}}</td>
-     	<td>{{$article->tags['name']}}</td>
+        <td>{{$article['title']}}</td>
+     	<td>{{$article['about']}}</td>
+            @foreach ($article->tags as $tag) 
+     	  <td>{{$tag['name']}}</td>
+            @endforeach          
         @endforeach
      </tr>
     @endforeach

@@ -9,8 +9,8 @@ class ArticleController extends Controller
     //
     public function ArticlesList(){
 
-     $articless = Article::all() ;
+     $articles = Article::all() ;
         //dd($articles);
-           return View('writerArticleTagTest', compact(['articless']));
+           return View('writerArticleTagTest', compact(['articles']));
     }      
 }
