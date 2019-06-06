@@ -10,7 +10,7 @@ $factory->define(Article::class, function (Faker $faker) {
         //
         'publication date'=> $faker->date($format = 'Y-m-d', $max = 'now'),
         'writer_id'=> $faker-> randomnumber(1),
-          'title' => $faker-> randomstring(5),
-           'about' => $faker-> randomstring(5),
+          'title' => $faker-> word (5),
+           'about' => $faker-> word (5),
     ];
 });

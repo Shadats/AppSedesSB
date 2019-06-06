@@ -7,7 +7,10 @@ use App\Article;
 class ArticleController extends Controller
 {
     //
-     $articles = Article::all() ;
+    public function ArticlesList(){
+
+     $articless = Article::all() ;
         //dd($articles);
-           return View('writerArticleTagTest', compact(['articles']));
+           return View('writerArticleTagTest', compact(['articless']));
+    }      
 }

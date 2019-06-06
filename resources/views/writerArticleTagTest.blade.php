@@ -17,11 +17,11 @@
      </tr>
      @foreach($writers as $writer)
      <tr>
-     	<td>{{$writer->authors name}}</td>
-     	<td>{{$writer->real name}}</td>
-        @foreach($articles as $article)
-        <td>{{$writer->articles['title']}}</td>
-     	<td>{{$writer->articles['about']}}</td>
+     	<td>{{$writer->authors_name}}</td>
+     	<td>{{$writer->real_name}}</td>
+        @foreach($writer->articles as $article)
+        <td>{{article['title']}}</td>
+     	<td>{{article['about']}}</td>
      	<td>{{$article->tags['name']}}</td>
         @endforeach
      </tr>

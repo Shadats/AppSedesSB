@@ -8,8 +8,8 @@ use Faker\Generator as Faker;
 $factory->define(Writer::class, function (Faker $faker) {
     return [
         //
-        'authors name' => $faker->name,
-        'real name' => $faker->name,
+        'authors_name' => $faker->name,
+        'real_name' => $faker->name,
         
     ];
 });

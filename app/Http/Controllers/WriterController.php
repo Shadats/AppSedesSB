@@ -7,7 +7,9 @@ use App\Writer;
 class WriterController extends Controller
 {
     //
-    $writers = Writer::all() ;
+    public function WriterList(){
+    	$writers = Writer::all() ;
         //dd($writers);
            return View('writerArticleTagTest', compact(['writers']));
+    }       
 }
