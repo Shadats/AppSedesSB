@@ -12,5 +12,6 @@ class Article_TagTableSeeder extends Seeder
     public function run()
     {
         //
+        factory(App\Writer::class,9)->create();
     }
 }

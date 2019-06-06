@@ -16,7 +16,7 @@
       height: 50px;
     }
     </style>
-	<title>Writers</title>
+	<title>Writers2</title>
 </head>
 <body>
  
@@ -31,22 +31,19 @@
         <th>Tags del articulo</th>
      </tr>
      @foreach($writers as $writer)
-     @foreach($writer->articles as $article)
-     @foreach ($article->tags as $tag) 
      <tr>
      	<td>{{$writer->authors_name}}</td>
      	<td>{{$writer->real_name}}</td>
-      
+        @foreach($writer->articles as $article)
 
         <td>{{$article['title']}}</td>
      	<td>{{$article['about']}}</td>
 
-            
+            @foreach ($article->tags as $tag) 
      	  <td>{{$tag['name']}}</td>
-         
+            @endforeach          
+        @endforeach
      </tr>
-    @endforeach          
-    @endforeach
     @endforeach
    	</table> 
    
